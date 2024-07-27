@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    * {
+        color: black;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    body{
+      background-image: url("https://images5.alphacoders.com/494/thumb-1920-494707.jpg");
+      background-repeat: no-repeat;
+    }
+
+    .centered-div { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .button-container {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px; 
+    }
+
+    button{
+      position: relative;
+      padding: 20px;
+      width: 200px;
+      border: none;
+      border-radius: 20px;
+    }
+
+    .corzinha-verde{
+      background-color: green;
+      font-size: 1.2em;
+      font-weight: 300;
+      color: white;
+    }
+
+    .corzinha-red{
+      background-color: red;
+      font-size: 1.2em;
+      font-weight: 300;
+      color: white;
+    }
+
+</style>
+</head>
+<body>
+    <div class="centered-div">
+        <h1>Hoje tem?</h1>
+        <div class="button-container">
+            <button onclick="dale()" class="corzinha-verde">Sim</button>
+            <button onmouseover="as()" id="botao" class="corzinha-red">Nao</button>
+        </div>
+    </div>
+</body>
+<script>
+  var botao_nao = document.getElementById("botao")
+
+  function dale(){
+    window.open("https://www.youtube.com/watch?v=izGwDsrQ1eQ");
+  }
+
+  function as(){
+    var valor1 = Math.random() * (400 - 1) + 1;
+    var valor2 = Math.random() * (400 - 1) + 1;
+    var valor3 = Math.random() * (400 - 1) + 1;
+    var valor4 = Math.random() * (400 - 1) + 1;
+    botao_nao.style.top = valor1+"px"
+    botao_nao.style.left = valor2+"px"
+    botao_nao.style.right = valor3+"px"
+    botao_nao.style.bottom = valor4+"px"
+  }
+
+</script>
+</html>
